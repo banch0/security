@@ -1,0 +1,16 @@
+version: '3'
+
+services:
+  db:
+    image: postgres:9.5-alpine
+  web:
+    build: .
+    command: ./bin/app
+    volumes:
+      - .:/go/src/
+    ports:
+      - "8081:8888"
+    depends_on:
+      - db
+
+# sudo chown -R $USER:$USER .
