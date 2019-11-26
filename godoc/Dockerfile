@@ -35,3 +35,7 @@ CMD ["./bin/app"]
 
 
 # sudo chown -R $USER:$USER .
+
+# docker cp <containerId>:/file/path/within/container /host/path/target
+
+# $ sudo docker cp goofy_roentgen:/out_read.jpg .
